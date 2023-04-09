@@ -1016,7 +1016,8 @@ void initElementNames(data_t *p_data) {
     p_data->elementNames = (idEntry*)calloc(numNames, sizeof(idEntry));
 
     // Position the file to the start of the ID entries
-    _fseek(p_data->file, p_data->IDPos, SEEK_SET);
+/* XXX: original code was :     _fseek(p_data->file, p_data->IDPos, SEEK_SET); */
+    _fseek(p_data->file, p_data->IDPos, SEEK_SET*0);
 
     for (j = 0; j < numNames; j++) {
         fread(&(p_data->elementNames[j].length), RECORDSIZE, 1, p_data->file);
@@ -1190,3 +1191,4 @@ char *newCharArray(int n)
 {
     return (char *)malloc((n) * sizeof(char));
 }
+

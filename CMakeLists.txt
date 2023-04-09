@@ -46,7 +46,7 @@ set(CONFIG_DIST  "cmake")
 
 
 # Define build options
-option(BUILD_TESTS "Build component tests (requires Boost)" OFF)
+option(BUILD_TESTS "Build component tests (requires Boost)" ON)
 option(BUILD_DOCS "Build toolkit docs (requires Doxygen)" OFF)
 option(BUILD_DEF   "Builds library with def file interface" OFF)
 
